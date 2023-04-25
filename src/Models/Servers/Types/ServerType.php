@@ -52,6 +52,11 @@ class ServerType extends Model
     public $cpuType;
 
     /**
+     * @var string
+     */
+    public $arch;
+
+    /**
      * ServerType constructor.
      *
      * @param  int  $serverTypeId
@@ -77,6 +82,7 @@ class ServerType extends Model
         $this->prices = $input->prices;
         $this->storageType = $input->storage_type;
         $this->cpuType = $input->cpu_type;
+        $this->arch = $this->architecture;
 
         return $this;
     }
