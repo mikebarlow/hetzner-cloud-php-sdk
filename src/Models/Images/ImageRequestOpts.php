@@ -18,16 +18,23 @@ class ImageRequestOpts extends RequestOpts
     public $name;
 
     /**
+     * @var string
+     */
+    public $architecture;
+
+    /**
      * RequestOpts constructor.
      *
      * @param $name
+     * @param $arch
      * @param $perPage
      * @param $page
      * @param $labelSelector
      */
-    public function __construct(string $name = null, int $perPage = null, int $page = null, string $labelSelector = null)
+    public function __construct(string $name = null, string $arch = null, int $perPage = null, int $page = null, string $labelSelector = null)
     {
         parent::__construct($perPage, $page, $labelSelector);
         $this->name = $name;
+        $this->architecture = $arch;
     }
 }
