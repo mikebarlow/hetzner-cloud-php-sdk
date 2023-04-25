@@ -82,7 +82,7 @@ class ServerType extends Model
         $this->prices = $input->prices;
         $this->storageType = $input->storage_type;
         $this->cpuType = $input->cpu_type;
-        $this->arch = $this->architecture;
+        $this->arch = $input->architecture;
 
         return $this;
     }
