@@ -37,6 +37,11 @@ class ServerType extends Model
     public $disk;
 
     /**
+     * @var int
+     */
+    public $includedTraffic;
+
+    /**
      * @var array
      */
     public $prices;
@@ -83,6 +88,7 @@ class ServerType extends Model
         $this->storageType = $input->storage_type;
         $this->cpuType = $input->cpu_type;
         $this->architecture = $input->architecture;
+        $this->includedTraffic = $input->included_traffic;
 
         return $this;
     }
